@@ -70,14 +70,14 @@ class MyHomePage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              BlocProvider.of<CounterCubit>(context).increment();
+              context.read<CounterCubit>().increment();
             },
             heroTag: "increment",
             child: Icon(Icons.add),
           ),
           FloatingActionButton(
             onPressed: () {
-              BlocProvider.of<CounterCubit>(context).decrement();
+              context.read<CounterCubit>().decrement();
             },
             heroTag: "decrement",
             child: Icon(Icons.remove),
